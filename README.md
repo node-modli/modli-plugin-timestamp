@@ -20,7 +20,7 @@ model object.
 
 ```javascript
 import { model, adapter, Joi, use } from 'modli';
-import { nedb } from 'modli-nedb';
+import nedb from 'modli-nedb';
 
 // IMPORTANT: Include the timestamp module
 import timestamp from 'modli-plugin-timestamp';
@@ -44,9 +44,9 @@ model.add({
 });
 
 // Add adapter using NeDB
-model.add({
+adapter.add({
   name: 'testNEDB',
-  source: nedb
+  source: nedb,
   config: {
     inMemoryOnly: true
   }
