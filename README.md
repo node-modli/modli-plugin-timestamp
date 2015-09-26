@@ -1,4 +1,8 @@
-# Modli - Timestamp Extension
+[![wercker status](https://app.wercker.com/status/bb95222575a57e1eb150e52ce9ae7d7a/s/master "wercker status")](https://app.wercker.com/project/bykey/bb95222575a57e1eb150e52ce9ae7d7a)
+[![Code Climate](https://codeclimate.com/github/node-modli/modli-plugin-timestamp/badges/gpa.svg)](https://codeclimate.com/github/node-modli/modli-plugin-timestamp)
+[![Test Coverage](https://codeclimate.com/github/node-modli/modli-plugin-timestamp/badges/coverage.svg)](https://codeclimate.com/github/node-modli/modli-plugin-timestamp/coverage)
+
+# Modli - Timestamp Plugin
 
 This module provides auto-generation functionality for specificly formatted 
 timestamps based on the CRUD operation assigned.
@@ -6,7 +10,7 @@ timestamps based on the CRUD operation assigned.
 ## Installation
 
 ```
-npm install modli-timestamp --save
+npm install modli-plugin-timestamp --save
 ```
 
 ## Usage
@@ -19,7 +23,7 @@ import { model, adapter, Joi, use } from 'modli';
 import { nedb } from 'modli-nedb';
 
 // IMPORTANT: Include the timestamp module
-import timestamp from 'modli-timestamp';
+import timestamp from 'modli-plugin-timestamp';
 
 // Create a model
 model.add({
@@ -50,8 +54,8 @@ model.add({
 
 const testModli = use('testModel', 'testNEDB');
 
-// IMPORTANT: Apply the extension by calling the function and supplying the Modli instance
-timestamp(testModli);
+// IMPORTANT: Apply the plugin to the instance
+testModli.plugin(timestamp);
 ```
 
 ## Makefile and Scripts
@@ -97,8 +101,8 @@ Both `make {COMMAND}` and `npm run {COMMAND}` work for any of the above commands
 
 ## License
 
-Modli-NeDB is licensed under the MIT license. Please see `LICENSE.txt` for full details.
+Modli-Timestamp is licensed under the MIT license. Please see `LICENSE.txt` for full details.
 
 ## Credits
 
-Modli-NeDB was designed and created at [TechnologyAdvice](http://www.technologyadvice.com).
+Modli-Timestamp was designed and created at [TechnologyAdvice](http://www.technologyadvice.com).

@@ -1,5 +1,5 @@
 {
-  "name": "modli-timestamp",
+  "name": "modli-plugin-timestamp",
   "version": "0.0.1",
   "description": "Modli extension for auto-generating timestamps",
   "main": "build/index.js",
@@ -36,6 +36,8 @@
     "express": "^4.13.3",
     "istanbul-harmony": "^0.3.16",
     "mocha": "^2.2.5",
+    "modli": "latest",
+    "modli-nedb": "latest",
     "pre-commit": "^1.1.1",
     "should": "^7.0.2"
   },
